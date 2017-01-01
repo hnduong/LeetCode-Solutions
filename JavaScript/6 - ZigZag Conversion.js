@@ -12,12 +12,12 @@ var convert = function(s, numRows) {
         var inc = 2 * (numRows - i - 1)
         var current = i
         var previous =-1
-        while(cur<s.length) {
-            if(cur != pre){
-                res += s[cur]
+        while(current < s.length) {
+            if(current != previous){
+                res += s[current]
             }
-            pre = cur
-            cur += inc
+            previous = current
+            current += inc
             inc = 2 * (numRows - 1) - inc
         }
     }
